@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ankit Rana Portfolio</title>
+<meta name="description" content="Ankit Rana is a UI/UX designer creating intuitive, responsive and accessible website interfaces and digital products.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ankit Rana Portfolio">
+<meta property="og:description" content="Ankit Rana is a UI/UX designer creating intuitive, responsive and accessible website interfaces and digital products.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#070714">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235B3DF5'/%3E%3Cstop offset='1' stop-color='%23E0257A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='24' font-weight='800' fill='white' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600;700&family=Jura:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <div class="nav-pill">
+      <a class="brand" href="index.html" aria-label="Ankit Rana, UI/UX Designer, home"><img class="brand-photo" src="assets/ankit-rana-sm.jpg" alt="" width="40" height="40"><span class="brand-txt"><span>Ankit Rana</span><small>UI/UX Designer</small></span></a>
+      <ul class="nav-links">
+        <li class="dd" id="workDD">
+          <button class="dd-btn" id="workBtn" type="button" aria-expanded="false" aria-controls="workMenu">Work <i data-lucide="chevron-down" class="chev"></i></button>
+          <div class="dd-menu" id="workMenu" hidden>
+            <div class="dd-grid"><div class="dd-group"><p class="dd-label">Case studies</p><a class="dd-item" href="case-ndi.html"><span class="dd-ico"><i data-lucide="bot"></i></span><span><strong>NDI · AI Assistant for Dental Procurement</strong><small>Enterprise dashboard + AI assistant</small></span></a><a class="dd-item" href="case-corporate.html"><span class="dd-ico"><i data-lucide="building-2"></i></span><span><strong>Corporate Website Redesign</strong><small>Enterprise site, responsive UI</small></span></a><a class="dd-item" href="case-government.html"><span class="dd-ico"><i data-lucide="landmark"></i></span><span><strong>Government Website Redesign</strong><small>Public service, accessible UI</small></span></a><a class="dd-item" href="case-mobile.html"><span class="dd-ico"><i data-lucide="smartphone"></i></span><span><strong>Mobile App UI Concept</strong><small>User flows, mobile screens</small></span></a></div><div class="dd-group compact"><p class="dd-label">Showcase</p><a class="dd-item" href="work.html#websites"><span class="dd-ico"><i data-lucide="monitor"></i></span><span><strong>Website designs</strong></span></a><a class="dd-item" href="work.html#mobile"><span class="dd-ico"><i data-lucide="smartphone"></i></span><span><strong>Mobile UI</strong></span></a><a class="dd-item" href="work.html#wireframes"><span class="dd-ico"><i data-lucide="pencil-ruler"></i></span><span><strong>Wireframes & UX</strong></span></a><a class="dd-item" href="work.html#developed"><span class="dd-ico"><i data-lucide="code"></i></span><span><strong>Developed websites</strong></span></a><a class="dd-item" href="work.html#branding"><span class="dd-ico"><i data-lucide="shapes"></i></span><span><strong>Branding & logos</strong></span></a><a class="dd-item" href="work.html#social"><span class="dd-ico"><i data-lucide="megaphone"></i></span><span><strong>Social media creatives</strong></span></a><a class="dd-item" href="work.html#videos"><span class="dd-ico"><i data-lucide="clapperboard"></i></span><span><strong>Videos</strong></span></a></div></div>
+            <a class="dd-all" href="work.html">View all work <i data-lucide="arrow-right" class="i-r"></i></a>
+          </div>
+        </li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta magnetic" href="resume.html">Resume <i data-lucide="file-text"></i></a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobilePanel" aria-label="Open menu">
+        <i data-lucide="menu" class="i-m"></i><i data-lucide="x" class="i-x"></i>
+      </button>
+    </div>
+    <nav class="mobile-panel" id="mobilePanel" aria-label="Mobile" hidden>
+      <ul>
+        <li>
+          <button class="m-link m-toggle" id="mWorkBtn" type="button" aria-expanded="false" aria-controls="mWork">Work <i data-lucide="chevron-down" class="chev"></i></button>
+          <ul class="m-subs" id="mWork" hidden><li class="m-group">Case studies</li><li><a class="m-sub" href="case-ndi.html"><i data-lucide="bot"></i>NDI · AI Assistant for Dental Procurement</a></li><li><a class="m-sub" href="case-corporate.html"><i data-lucide="building-2"></i>Corporate Website Redesign</a></li><li><a class="m-sub" href="case-government.html"><i data-lucide="landmark"></i>Government Website Redesign</a></li><li><a class="m-sub" href="case-mobile.html"><i data-lucide="smartphone"></i>Mobile App UI Concept</a></li><li class="m-group">Showcase</li><li><a class="m-sub" href="work.html#websites"><i data-lucide="monitor"></i>Website designs</a></li><li><a class="m-sub" href="work.html#mobile"><i data-lucide="smartphone"></i>Mobile UI</a></li><li><a class="m-sub" href="work.html#wireframes"><i data-lucide="pencil-ruler"></i>Wireframes & UX</a></li><li><a class="m-sub" href="work.html#developed"><i data-lucide="code"></i>Developed websites</a></li><li><a class="m-sub" href="work.html#branding"><i data-lucide="shapes"></i>Branding & logos</a></li><li><a class="m-sub" href="work.html#social"><i data-lucide="megaphone"></i>Social media creatives</a></li><li><a class="m-sub" href="work.html#videos"><i data-lucide="clapperboard"></i>Videos</a></li><li><a class="m-sub all" href="work.html"><i data-lucide="layout-grid"></i>View all work</a></li></ul>
+        </li>
+        <li><a class="m-link" href="skills.html">Skills <i data-lucide="arrow-right"></i></a></li>
+        <li><a class="m-link" href="about.html">About <i data-lucide="arrow-right"></i></a></li>
+        <li><a class="m-link" href="contact.html">Contact <i data-lucide="arrow-right"></i></a></li>
+      </ul>
+      <a class="btn btn-primary" href="resume.html">View Resume <i data-lucide="file-text"></i></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="wrap hero-grid" id="heroGrid">
+      <div class="hero-copy">
+        <p class="status"><span class="status-av"><img src="assets/ankit-rana-sm.jpg" alt="" width="32" height="32"><span class="dot" aria-hidden="true"></span></span>UI/UX Designer <b>· Associate UI Designer at Compunnel</b></p>
+        <h1 id="hero-title"><span class="ln">Designing digital</span> <span class="ln">experiences that</span> <span class="ln">feel <span class="grad-text">intuitive.</span></span></h1>
+        <p class="hero-lede">Hi, I'm <strong>Ankit Rana</strong>. I design <strong>website interfaces</strong> and <strong>responsive experiences</strong> with thoughtful interactions and accessibility built in from the first frame.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary magnetic" href="#work">Explore My Work <i data-lucide="arrow-down" class="i-d"></i></a>
+          <a class="btn btn-ghost magnetic" href="resume.html">View Resume <i data-lucide="file-text"></i></a>
+        </div>
+        <ul class="hero-meta" aria-label="Highlights">
+          <li><i data-lucide="figma"></i>Figma</li>
+          <li><i data-lucide="accessibility"></i>Accessibility-aware</li>
+          <li><i data-lucide="award"></i>IBM Design Thinking</li>
+        </ul>
+      </div>
+
+      <div class="hv" aria-hidden="true">
+        <div class="hv-inner" id="hvInner">
+          <div class="scr s-web">
+            <div class="bar"><i></i><i></i><i></i><span>studio-concept.design</span></div>
+            <div class="pg">
+              <nav><b>Studio</b><span>Services</span><span>Work</span><em>Contact</em></nav>
+              <div class="hl">
+                <div><h4>Design that moves <span>business forward</span></h4><p>Clear structure, bold visuals and responsive layouts.</p><div class="cta-row"><i></i><i></i></div></div>
+                <div class="art"></div>
+              </div>
+              <div class="feat"><div><i></i><span></span><span></span></div><div><i></i><span></span><span></span></div><div><i></i><span></span><span></span></div></div>
+            </div>
+          </div>
+          <div class="scr s-dash">
+            <div class="bar"><i></i><i></i><i></i><span>dashboard</span></div>
+            <div class="pg">
+              <aside><i></i><i></i><i></i><i></i><i></i></aside>
+              <div class="main">
+                <h5>Overview</h5>
+                <div class="kpis"><div><b></b><span></span></div><div><b></b><span></span></div><div><b></b><span></span></div></div>
+                <div class="chart"><i style="height:40%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:60%"></i><i style="height:95%"></i><i style="height:72%"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="scr s-phone">
+            <div class="pg">
+              <span class="nt"></span>
+              <h6>Good morning</h6>
+              <div class="card"><span></span><span style="width:45%"></span><b></b></div>
+              <div class="list"><div><i></i><span></span></div><div><i style="background:rgba(255,95,176,.5)"></i><span></span></div><div><i style="background:rgba(90,162,255,.5)"></i><span></span></div></div>
+              <div class="tabs"><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <span class="hv-chip c1"><i data-lucide="monitor-smartphone"></i>Responsive</span>
+          <span class="hv-chip c2"><i data-lucide="check"></i>Contrast AAA</span>
+          <div class="f-cursor"><svg viewBox="0 0 24 24"><path d="M3 2l7.5 19 2.6-7.9L21 10.5z"/></svg><span>Ankit</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-label="Tools I use">
+    <div class="track">
+      <span class=hl><i data-lucide="figma"></i>Figma</span><span class=hl><i data-lucide="wand-sparkles"></i>Figma Make</span><span><i data-lucide="image"></i>Photoshop</span><span><i data-lucide="pen-tool"></i>Illustrator</span><span><i data-lucide="sparkles"></i>Google Stitch</span><span><i data-lucide="bot"></i>Google AI Studio</span><span><i data-lucide="sparkle"></i>Gemini</span><span><i data-lucide="message-square"></i>Claude</span><span><i data-lucide="message-circle"></i>ChatGPT</span><span><i data-lucide="brush"></i>Midjourney</span><span><i data-lucide="globe"></i>WordPress</span><span><i data-lucide="presentation"></i>PowerPoint</span><span><i data-lucide="clapperboard"></i>Premiere Pro</span><span><i data-lucide="film"></i>After Effects</span><span class="dup hl" aria-hidden="true"><i data-lucide="figma"></i>Figma</span><span class="dup hl" aria-hidden="true"><i data-lucide="wand-sparkles"></i>Figma Make</span><span class="dup" aria-hidden="true"><i data-lucide="image"></i>Photoshop</span><span class="dup" aria-hidden="true"><i data-lucide="pen-tool"></i>Illustrator</span><span class="dup" aria-hidden="true"><i data-lucide="sparkles"></i>Google Stitch</span><span class="dup" aria-hidden="true"><i data-lucide="bot"></i>Google AI Studio</span><span class="dup" aria-hidden="true"><i data-lucide="sparkle"></i>Gemini</span><span class="dup" aria-hidden="true"><i data-lucide="message-square"></i>Claude</span><span class="dup" aria-hidden="true"><i data-lucide="message-circle"></i>ChatGPT</span><span class="dup" aria-hidden="true"><i data-lucide="brush"></i>Midjourney</span><span class="dup" aria-hidden="true"><i data-lucide="globe"></i>WordPress</span><span class="dup" aria-hidden="true"><i data-lucide="presentation"></i>PowerPoint</span><span class="dup" aria-hidden="true"><i data-lucide="clapperboard"></i>Premiere Pro</span><span class="dup" aria-hidden="true"><i data-lucide="film"></i>After Effects</span>
+    </div>
+  </div>
+
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kicker">Selected work</span>
+        <h2 id="work-title">Projects that show how I <span class="grad-text">think and design</span></h2>
+        <p>Website redesigns and app UI. Open a case study to see the process, decisions and screens.</p>
+      </div>
+      <div class="stack">
+        <article class="project rv" style="--i:0" id="case-ndi" data-cat="web">
+          <div class="p-body">
+            <div class="p-top"><span class="p-num">01 / 04</span><span class="tag"><i data-lucide="bot"></i>Enterprise dashboard · AI</span></div>
+            <h3>NDI · AI Assistant for Dental Procurement</h3>
+            <p>Designing a conversational AI assistant inside an enterprise dental procurement dashboard, so users can ask instead of navigating.</p>
+            <ul class="chips" aria-label="Deliverables"><li>Dashboard UI</li><li>AI chat panel</li><li>Interaction design</li><li>Prototype</li></ul>
+            <div class="p-cta"><a class="btn btn-primary magnetic" href="case-ndi.html">View case study <i data-lucide="arrow-right" class="i-r"></i></a></div>
+          </div>
+          <div class="p-visual p1 vid-visual">
+            
+            <div class="mock"><figure class="ndi-video card-vid" data-autoplay-video>
+  <video autoplay muted playsinline preload="auto" poster="assets/work/ndi/ndi-prototype-poster.jpg" aria-label="NDI AI assistant prototype">
+    <source src="assets/work/ndi/ndi-prototype.webm" type="video/webm">
+    <source src="assets/work/ndi/ndi-prototype.mp4" type="video/mp4">
+  </video>
+  <button class="vid-replay" type="button" hidden><span><i data-lucide="rotate-ccw"></i></span>Replay</button>
+  <span class="vid-live" aria-hidden="true"><i></i>Prototype</span>
+</figure></div>
+          </div>
+        </article><article class="project flip rv" style="--i:1" id="case-corporate" data-cat="web">
+          <div class="p-body">
+            <div class="p-top"><span class="p-num">02 / 04</span><span class="tag"><i data-lucide="building-2"></i>Corporate website</span></div>
+            <h3>Corporate Website Redesign</h3>
+            <p>Restructuring a corporate site so services are easier to find and the brand feels current across devices.</p>
+            <ul class="chips" aria-label="Deliverables"><li>Information architecture</li><li>Wireframes</li><li>Responsive UI</li></ul>
+            <div class="p-cta"><a class="btn btn-primary magnetic" href="case-corporate.html">View case study <i data-lucide="arrow-right" class="i-r"></i></a></div>
+          </div>
+          <div class="p-visual p1">
+            <span class="preview-note"><i data-lucide="image"></i>Concept preview</span>
+            <div class="mock"><div class="browser" aria-hidden="true">
+  <div class="b-bar"><i></i><i></i><i></i><span></span></div>
+  <div class="b-body">
+    <div class="r" style="justify-content:space-between"><span class="k v" style="width:60px;height:12px"></span><span class="k" style="width:160px;height:12px"></span></div>
+    <div class="r" style="margin-top:10px"><div style="flex:1.1;display:grid;gap:10px"><span class="k w" style="height:20px;width:92%"></span><span class="k w" style="height:20px;width:64%"></span><span class="k" style="height:9px;width:86%"></span><span class="k" style="height:9px;width:60%"></span><span class="k v" style="height:26px;width:42%;border-radius:99px;margin-top:6px"></span></div><span class="k m" style="flex:1;height:150px;border-radius:14px"></span></div>
+    <div class="r"><span class="k" style="flex:1;height:70px"></span><span class="k" style="flex:1;height:70px"></span><span class="k" style="flex:1;height:70px"></span></div>
+  </div>
+</div></div>
+          </div>
+        </article><article class="project rv" style="--i:2" id="case-government" data-cat="web">
+          <div class="p-body">
+            <div class="p-top"><span class="p-num">03 / 04</span><span class="tag"><i data-lucide="landmark"></i>Public service</span></div>
+            <h3>Government Website Redesign</h3>
+            <p>Making public information and services clearer, more readable and easier to use for every citizen.</p>
+            <ul class="chips" aria-label="Deliverables"><li>Content structure</li><li>Accessible UI</li><li>Design system</li></ul>
+            <div class="p-cta"><a class="btn btn-primary magnetic" href="case-government.html">View case study <i data-lucide="arrow-right" class="i-r"></i></a></div>
+          </div>
+          <div class="p-visual p2">
+            <span class="preview-note"><i data-lucide="image"></i>Concept preview</span>
+            <div class="mock"><div class="browser" aria-hidden="true">
+  <div class="b-bar"><i></i><i></i><i></i><span></span></div>
+  <div class="b-body">
+    <span class="k w" style="height:20px;width:58%"></span>
+    <div class="r"><span class="k" style="flex:1;height:40px;border-radius:99px"></span><span class="k b" style="width:110px;height:40px;border-radius:99px"></span></div>
+    <div class="r"><span class="k" style="flex:1;height:76px;background:rgba(61,123,255,.3)"></span><span class="k" style="flex:1;height:76px;background:rgba(124,92,255,.3)"></span><span class="k" style="flex:1;height:76px;background:rgba(61,123,255,.3)"></span></div>
+    <div class="r"><span class="k" style="flex:1;height:76px"></span><span class="k" style="flex:1;height:76px"></span><span class="k" style="flex:1;height:76px"></span></div>
+  </div>
+</div></div>
+          </div>
+        </article>
+      </div>
+      <div style="margin-top:40px;display:flex;justify-content:center"><a class="btn btn-ghost magnetic" href="work.html">View all work <i data-lucide="arrow-right" class="i-r"></i></a></div>
+    </div>
+  </section>
+
+  <section class="section" id="skills" aria-labelledby="skills-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kicker">What I bring</span>
+        <h2 id="skills-title">Skills you can <span class="grad-text">see in action</span></h2>
+        <p>Each card is a small live demo of how I approach that part of the work.</p>
+      </div>
+      <div class="bento">
+        <article class="tile t-a rv">
+          <span class="tile-ico"><i data-lucide="layout-dashboard"></i></span>
+          <h3>Interface design</h3>
+          <p>Clean, structured screens where visual hierarchy tells people what matters and what to do next.</p>
+          <div class="demo d-ui" aria-hidden="true"><div class="side"><i></i><i></i><i></i><i></i><i></i></div><div class="main"><i></i><i></i><div class="cards"><i></i><i></i><i></i></div></div></div>
+        </article>
+        <article class="tile t-b rv" style="--d:.08s">
+          <span class="tile-ico"><i data-lucide="monitor-smartphone"></i></span>
+          <h3>Responsive design</h3>
+          <p>Layouts rethought for every screen, from 360px phones to wide desktops.</p>
+          <div class="demo" aria-hidden="true"><div class="d-resp"><div class="fr"><i></i><i></i><i></i></div></div></div>
+        </article>
+        <article class="tile t-c rv">
+          <span class="tile-ico"><i data-lucide="accessibility"></i></span>
+          <h3>Accessibility-aware</h3>
+          <p>Readable text, strong contrast and clear focus states. Try it:</p>
+          <div class="demo d-contrast" id="contrastDemo">
+            <p class="sample">Readable for everyone</p>
+            <div class="row"><button class="switch" id="contrastBtn" type="button" aria-pressed="false"><span class="trk" aria-hidden="true"></span>Fix contrast</button><span class="verdict" id="verdict" aria-live="polite"><i data-lucide="x"></i>1.6:1 Fails</span></div>
+          </div>
+        </article>
+        <article class="tile t-d rv" style="--d:.08s">
+          <span class="tile-ico"><i data-lucide="swatch-book"></i></span>
+          <h3>Visual systems</h3>
+          <p>Color tokens, type scales and reusable components that keep every page consistent.</p>
+          <div class="demo d-tokens" aria-hidden="true"><i style="background:#7C5CFF"></i><i style="background:#9D86FF"></i><i style="background:#FF3D9A"></i><i style="background:#3D7BFF"></i><i style="background:#F5F4FF"></i></div>
+        </article>
+        <article class="tile t-e rv" style="--d:.16s">
+          <span class="tile-ico"><i data-lucide="workflow"></i></span>
+          <h3>Prototyping</h3>
+          <p>Clickable Figma flows that show how screens connect before anything is built.</p>
+          <svg class="demo d-flow" viewBox="0 0 260 110" aria-hidden="true"><rect class="hot" x="4" y="30" width="56" height="50" rx="10"/><rect x="102" y="8" width="56" height="44" rx="10"/><rect x="102" y="62" width="56" height="44" rx="10"/><rect x="200" y="30" width="56" height="50" rx="10"/><path d="M60 50 C 80 50, 82 30, 102 30"/><path d="M60 60 C 80 60, 82 84, 102 84"/><path d="M158 30 C 180 30, 180 50, 200 50"/></svg>
+        </article>
+        <article class="tile t-f rv">
+          <span class="tile-ico"><i data-lucide="sparkles"></i></span>
+          <h3>AI-assisted exploration</h3>
+          <p>Google Stitch, Figma Make and Midjourney help me explore ideas faster. Design judgment makes the final call.</p>
+          <div class="demo d-ai" aria-hidden="true"><i data-lucide="wand-sparkles"></i><span><span id="typed"></span><span class="caret"></span></span></div>
+        </article>
+        <article class="tile t-g rv" style="--d:.08s">
+          <span class="tile-ico"><i data-lucide="ruler"></i></span>
+          <h3>Design QA &amp; handoff</h3>
+          <p>Clear specs and annotations so developers can build exactly what was designed.</p>
+          <span class="learning">Growing skill</span>
+          <div class="demo d-spec" aria-hidden="true"><span class="btn-s"><span class="ln h"></span><span class="ln v"></span><span class="m t">160</span><span class="m l">48</span>Get started</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process" id="approach" aria-labelledby="approach-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kicker">Design approach</span>
+        <h2 id="approach-title">From problem to <span class="grad-text">polished interface</span></h2>
+      </div>
+      <ol class="steps" id="steps">
+        <li class="step"><span class="n"><i data-lucide="search"></i></span><span class="lbl">Step 1</span><h3>Understand</h3><p>Business goals, user needs and constraints.</p></li>
+        <li class="step"><span class="n"><i data-lucide="target"></i></span><span class="lbl">Step 2</span><h3>Define</h3><p>Name the problem and prioritise requirements.</p></li>
+        <li class="step"><span class="n"><i data-lucide="git-branch"></i></span><span class="lbl">Step 3</span><h3>Explore</h3><p>Organise content, map user flows, sketch wireframes.</p></li>
+        <li class="step"><span class="n"><i data-lucide="pen-tool"></i></span><span class="lbl">Step 4</span><h3>Design</h3><p>Visual system, responsive screens and prototypes.</p></li>
+        <li class="step"><span class="n"><i data-lucide="refresh-cw"></i></span><span class="lbl">Step 5</span><h3>Refine</h3><p>Review usability, accessibility and feedback.</p></li>
+      </ol>
+      <p class="process-note">How deep each step goes depends on the project's scope and timeline.</p>
+      <div style="margin-top:32px"><a class="btn btn-ghost magnetic" href="skills.html">See all my skills <i data-lucide="arrow-right" class="i-r"></i></a></div>
+    </div>
+  </section>
+
+  <section class="section" id="tools" aria-labelledby="tools-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kicker">Tools &amp; workflow</span>
+        <h2 id="tools-title">My <span class="grad-text">design toolkit</span></h2>
+      </div>
+      <div class="tools">
+        <div class="tg core rv">
+          <header><h3><i data-lucide="figma"></i>UI/UX</h3><span class="badge">Core</span></header>
+          <div class="big"><span>Figma</span><span>Figma Make</span></div>
+          <p>Where every project lives: wireframes, components, responsive layouts and prototypes.</p>
+        </div>
+        <div class="tg rv" style="--d:.06s"><header><h3><i data-lucide="pen-tool"></i>Visual design</h3></header><ul class="tl"><li>Photoshop</li><li>Illustrator</li></ul></div>
+        <div class="tg rv" style="--d:.12s"><header><h3><i data-lucide="globe"></i>Web &amp; presentation</h3></header><ul class="tl"><li>WordPress</li><li>PowerPoint</li></ul></div>
+        <div class="tg ai rv"><header><h3><i data-lucide="sparkles"></i>AI-assisted workflow</h3></header><ul class="tl"><li>Google Stitch</li><li>Google AI Studio</li><li>Gemini</li><li>Claude</li><li>ChatGPT</li><li>Midjourney</li></ul></div>
+        <div class="tg minor rv"><header><h3><i data-lucide="film"></i>Creative production</h3><span class="badge">Supporting</span></header><ul class="tl"><li>Premiere Pro</li><li>After Effects</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about" aria-labelledby="about-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kicker">About me</span>
+        <h2 id="about-title">Curious, detail-driven and <span class="grad-text">always iterating</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card rv">
+          <div class="mono-id"><img class="avatar photo" src="assets/ankit-rana-sm.jpg" alt="Ankit Rana" width="84" height="84" loading="lazy"><div><strong>Ankit Rana</strong><span>UI/UX Designer</span></div></div>
+          <p class="lead">I love turning complex requirements into interfaces people understand at a glance.</p>
+          <p>As an Associate UI Designer at Compunnel Technology, I work on website redesigns and digital design projects, taking pages from structure and wireframes to polished, responsive UI.</p>
+          <p>I care about accessibility, visual consistency and the small details that make an interface feel finished.</p>
+          <a class="btn btn-ghost magnetic" href="about.html" style="justify-self:start">Read my story <i data-lucide="arrow-right" class="i-r"></i></a>
+        </div>
+        <div class="side-col">
+          <div class="about-card rv" style="--d:.08s">
+            <p class="mini-h"><i data-lucide="briefcase"></i>Experience</p>
+            <ul class="xp">
+              <li class="now"><span class="when">Jun 2025 – Present</span><strong>Associate UI Designer</strong><span class="org">Compunnel Technology Pvt. Ltd.</span></li>
+              <li><span class="when">Feb 2023 – May 2025</span><strong>Process Developer</strong><span class="org">Genpact · Banking operations, Westpac Bank process</span></li>
+              <li><span class="when">2018</span><strong>Bachelor of Commerce</strong><span class="org">Delhi University</span></li>
+            </ul>
+          </div>
+          <div class="about-card rv" style="--d:.16s">
+            <p class="mini-h"><i data-lucide="award"></i>Certifications &amp; learning</p>
+            <ul class="certs">
+              <li><span class="ci"><i data-lucide="lightbulb"></i></span>IBM Enterprise Design Thinking Practitioner</li>
+              <li><span class="ci"><i data-lucide="terminal"></i></span>IBM Prompt Engineering for Everyone</li>
+              <li><span class="ci"><i data-lucide="graduation-cap"></i></span>UI/UX Design · Le Wagon</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta rv">
+        <span class="kicker">Let's connect</span>
+        <h2 id="contact-title">Have a digital experience that needs thoughtful design?</h2>
+        <p>I'm happy to talk about UI/UX, UI, web and digital design roles, or a project you're shaping.</p>
+        <div class="cta-actions">
+          <a class="btn btn-white magnetic" data-email-link href="mailto:ankitrana3654@gmail.com"><i data-lucide="mail"></i>Email me</a>
+          <a class="btn btn-whatsapp magnetic" data-whatsapp href="https://wa.me/918287259865"><i data-lucide="message-circle"></i>WhatsApp</a>
+          <a class="btn btn-line magnetic" data-phone-link href="tel:+918287259865"><i data-lucide="phone"></i>Call me</a>
+          <a class="btn btn-line magnetic" data-linkedin href="https://www.linkedin.com/in/ankitrana190997/"><i data-lucide="linkedin"></i>LinkedIn <i data-lucide="arrow-up-right" class="i-ur"></i></a>
+        </div>
+        <div class="mail-line">
+          <span class="ml-item" data-copy-scope><i data-lucide="mail"></i><span class="addr" data-email-text>ankitrana3654@gmail.com</span><button class="copy" type="button" data-copy-email><i data-lucide="copy"></i><span>Copy</span></button></span>
+          <span class="ml-item"><i data-lucide="phone"></i><span class="addr" data-phone-text>+91 82872 59865</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap f-grid">
+    <div class="f-id"><img class="brand-photo" src="assets/ankit-rana-sm.jpg" alt="" width="44" height="44" loading="lazy"><div><strong>Ankit Rana</strong><span>UI/UX Designer</span></div></div>
+    <ul class="f-links">
+      <li><a href="work.html">Work</a></li><li><a href="skills.html">Skills</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+      <li><a data-linkedin href="https://www.linkedin.com/in/ankitrana190997/"><i data-lucide="linkedin"></i>LinkedIn</a></li>
+      <li><a href="https://www.behance.net/ankitrana31" target="_blank" rel="noopener"><i data-lucide="palette"></i>Behance</a></li>
+      <li><a data-email-link href="mailto:ankitrana3654@gmail.com"><i data-lucide="mail"></i>Email</a></li>
+      <li><a data-whatsapp href="https://wa.me/918287259865"><i data-lucide="message-circle"></i>WhatsApp</a></li>
+      <li><a data-phone-link href="tel:+918287259865"><i data-lucide="phone"></i><span data-phone-text>+91 82872 59865</span></a></li>
+    </ul>
+    <p class="f-copy">© <span data-year>2026</span> Ankit Rana</p>
+    <a class="to-top" href="#top" aria-label="Back to top"><i data-lucide="arrow-up"></i></a>
+  </div>
+</footer>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="work-data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

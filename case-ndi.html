@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NDI · AI Assistant for Dental Procurement Case Study</title>
+<meta name="description" content="Designing a conversational AI assistant inside an enterprise dental procurement dashboard, so users can ask instead of navigating.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NDI · AI Assistant for Dental Procurement Case Study">
+<meta property="og:description" content="Designing a conversational AI assistant inside an enterprise dental procurement dashboard, so users can ask instead of navigating.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#070714">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235B3DF5'/%3E%3Cstop offset='1' stop-color='%23E0257A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='24' font-weight='800' fill='white' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600;700&family=Jura:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <div class="nav-pill">
+      <a class="brand" href="index.html" aria-label="Ankit Rana, UI/UX Designer, home"><img class="brand-photo" src="assets/ankit-rana-sm.jpg" alt="" width="40" height="40"><span class="brand-txt"><span>Ankit Rana</span><small>UI/UX Designer</small></span></a>
+      <ul class="nav-links">
+        <li class="dd" id="workDD">
+          <button class="dd-btn active" id="workBtn" type="button" aria-expanded="false" aria-controls="workMenu">Work <i data-lucide="chevron-down" class="chev"></i></button>
+          <div class="dd-menu" id="workMenu" hidden>
+            <div class="dd-grid"><div class="dd-group"><p class="dd-label">Case studies</p><a class="dd-item" href="case-ndi.html"><span class="dd-ico"><i data-lucide="bot"></i></span><span><strong>NDI · AI Assistant for Dental Procurement</strong><small>Enterprise dashboard + AI assistant</small></span></a><a class="dd-item" href="case-corporate.html"><span class="dd-ico"><i data-lucide="building-2"></i></span><span><strong>Corporate Website Redesign</strong><small>Enterprise site, responsive UI</small></span></a><a class="dd-item" href="case-government.html"><span class="dd-ico"><i data-lucide="landmark"></i></span><span><strong>Government Website Redesign</strong><small>Public service, accessible UI</small></span></a><a class="dd-item" href="case-mobile.html"><span class="dd-ico"><i data-lucide="smartphone"></i></span><span><strong>Mobile App UI Concept</strong><small>User flows, mobile screens</small></span></a></div><div class="dd-group compact"><p class="dd-label">Showcase</p><a class="dd-item" href="work.html#websites"><span class="dd-ico"><i data-lucide="monitor"></i></span><span><strong>Website designs</strong></span></a><a class="dd-item" href="work.html#mobile"><span class="dd-ico"><i data-lucide="smartphone"></i></span><span><strong>Mobile UI</strong></span></a><a class="dd-item" href="work.html#wireframes"><span class="dd-ico"><i data-lucide="pencil-ruler"></i></span><span><strong>Wireframes & UX</strong></span></a><a class="dd-item" href="work.html#developed"><span class="dd-ico"><i data-lucide="code"></i></span><span><strong>Developed websites</strong></span></a><a class="dd-item" href="work.html#branding"><span class="dd-ico"><i data-lucide="shapes"></i></span><span><strong>Branding & logos</strong></span></a><a class="dd-item" href="work.html#social"><span class="dd-ico"><i data-lucide="megaphone"></i></span><span><strong>Social media creatives</strong></span></a><a class="dd-item" href="work.html#videos"><span class="dd-ico"><i data-lucide="clapperboard"></i></span><span><strong>Videos</strong></span></a></div></div>
+            <a class="dd-all" href="work.html">View all work <i data-lucide="arrow-right" class="i-r"></i></a>
+          </div>
+        </li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta magnetic" href="resume.html">Resume <i data-lucide="file-text"></i></a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobilePanel" aria-label="Open menu">
+        <i data-lucide="menu" class="i-m"></i><i data-lucide="x" class="i-x"></i>
+      </button>
+    </div>
+    <nav class="mobile-panel" id="mobilePanel" aria-label="Mobile" hidden>
+      <ul>
+        <li>
+          <button class="m-link m-toggle" id="mWorkBtn" type="button" aria-expanded="false" aria-controls="mWork">Work <i data-lucide="chevron-down" class="chev"></i></button>
+          <ul class="m-subs" id="mWork" hidden><li class="m-group">Case studies</li><li><a class="m-sub" href="case-ndi.html"><i data-lucide="bot"></i>NDI · AI Assistant for Dental Procurement</a></li><li><a class="m-sub" href="case-corporate.html"><i data-lucide="building-2"></i>Corporate Website Redesign</a></li><li><a class="m-sub" href="case-government.html"><i data-lucide="landmark"></i>Government Website Redesign</a></li><li><a class="m-sub" href="case-mobile.html"><i data-lucide="smartphone"></i>Mobile App UI Concept</a></li><li class="m-group">Showcase</li><li><a class="m-sub" href="work.html#websites"><i data-lucide="monitor"></i>Website designs</a></li><li><a class="m-sub" href="work.html#mobile"><i data-lucide="smartphone"></i>Mobile UI</a></li><li><a class="m-sub" href="work.html#wireframes"><i data-lucide="pencil-ruler"></i>Wireframes & UX</a></li><li><a class="m-sub" href="work.html#developed"><i data-lucide="code"></i>Developed websites</a></li><li><a class="m-sub" href="work.html#branding"><i data-lucide="shapes"></i>Branding & logos</a></li><li><a class="m-sub" href="work.html#social"><i data-lucide="megaphone"></i>Social media creatives</a></li><li><a class="m-sub" href="work.html#videos"><i data-lucide="clapperboard"></i>Videos</a></li><li><a class="m-sub all" href="work.html"><i data-lucide="layout-grid"></i>View all work</a></li></ul>
+        </li>
+        <li><a class="m-link" href="skills.html">Skills <i data-lucide="arrow-right"></i></a></li>
+        <li><a class="m-link" href="about.html">About <i data-lucide="arrow-right"></i></a></li>
+        <li><a class="m-link" href="contact.html">Contact <i data-lucide="arrow-right"></i></a></li>
+      </ul>
+      <a class="btn btn-primary" href="resume.html">View Resume <i data-lucide="file-text"></i></a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="ndi">
+  <section class="page-hero" id="top" aria-labelledby="cs-h">
+    <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <a class="crumb" href="work.html"><i data-lucide="arrow-left"></i>All projects</a>
+      <ul class="chips ndi-tags" aria-label="Disciplines"><li>UI/UX Design</li><li>AI Experience</li><li>Enterprise SaaS</li><li>Interaction Design</li></ul>
+      <h1 class="page-title" id="cs-h">AI assistant for an enterprise <span class="grad-text">dental procurement</span> dashboard</h1>
+      <p class="page-lede">NDI (Nashville Dental Inc.) runs a procurement dashboard for dental products, equipment and related services. I designed a conversational assistant that lives inside it, so users can <strong style="color:var(--ink)">ask instead of navigating</strong>.</p>
+      <dl class="cs-meta">
+        <div><dt>Client</dt><dd>NDI · Nashville Dental Inc.</dd></div>
+        <div><dt>My role</dt><dd>UI design, UX strategy, prototyping</dd></div>
+        <div><dt>Platform</dt><dd>Web dashboard</dd></div>
+        <div><dt>Tools</dt><dd>Figma, Figma Make, Claude</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="wrap rv" aria-label="Prototype video">
+    <div class="ndi-showcase">
+      <figure class="ndi-video" data-autoplay-video>
+        <video autoplay muted playsinline preload="auto" poster="assets/work/ndi/ndi-prototype-poster.jpg" aria-label="Prototype walkthrough of the AI assistant">
+          <source src="assets/work/ndi/ndi-prototype.webm" type="video/webm">
+          <source src="assets/work/ndi/ndi-prototype.mp4" type="video/mp4">
+        </video>
+        <button class="vid-replay" type="button" hidden><span><i data-lucide="rotate-ccw"></i></span>Replay</button>
+        <span class="vid-live" aria-hidden="true"><i></i>Prototype</span>
+      </figure>
+      <div class="ndi-vid-notes">
+        <p class="kicker">Watch the prototype</p>
+        <h2>One request, start to finish</h2>
+        <ol>
+          <li><span>01</span>Open the assistant from “Need Help?” in the header</li>
+          <li><span>02</span>Pick a suggested prompt</li>
+          <li><span>03</span>Choose from the options in the reply</li>
+          <li><span>04</span>Get the answer and a next step, without leaving the dashboard</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="ctx-h">
+    <div class="wrap cs-section">
+      <div class="side rv"><span class="kicker">Context</span><h2 id="ctx-h" style="margin-top:14px">A dashboard with a lot to find</h2></div>
+      <div class="prose rv">
+        <p>The dashboard brings product browsing, purchase history, discounts, analytics, user management, performance reviews, support tickets and user activity into one place. Products span categories like <strong>protective gear, restorative materials, surgical tools, disposable supplies and machinery</strong>, alongside equipment and technology, installation, maintenance and related services.</p>
+        <p>That breadth is useful, but it means people often have to dig through menus to find one answer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="prob-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="kicker">The problem</span><h2 id="prob-h">Complex systems <span class="grad-text">create friction</span></h2><p>Four issues the design set out to address.</p></div>
+      <div class="ndi-probs">
+        <article class="ndi-prob rv"><i data-lucide="mouse-pointer-2"></i><h3>Too many clicks</h3><p>Simple tasks sit behind nested menus.</p></article>
+        <article class="ndi-prob rv" style="--d:.06s"><i data-lucide="network"></i><h3>Complex navigation</h3><p>Deep information architecture adds mental effort and makes people give up on tasks.</p></article>
+        <article class="ndi-prob rv" style="--d:.12s"><i data-lucide="eye-off"></i><h3>Hidden features</h3><p>Useful capabilities go unused because they are buried in settings.</p></article>
+        <article class="ndi-prob rv" style="--d:.18s"><i data-lucide="life-buoy"></i><h3>High support dependency</h3><p>Less experienced users raise tickets for simple lookups.</p></article>
+        <article class="ndi-q rv">
+          <p class="kicker">Design question</p>
+          <h3>What if users could simply ask instead of navigating?</h3>
+          <div class="ndi-q-viz" aria-hidden="true"><span class="bad"><i data-lucide="x"></i></span><i class="dash"></i><span class="good"><i data-lucide="sparkles"></i></span></div>
+          <div class="ndi-q-lbl"><span>Many clicks</span><span>One prompt</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="goal-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="kicker">Goals</span><h2 id="goal-h">Strategic <span class="grad-text">design goals</span></h2></div>
+      <div class="value-grid">
+        <div class="value rv"><i data-lucide="target"></i><h3>Reduce load</h3><p>Lower the mental effort of finding information and running queries.</p></div>
+        <div class="value rv" style="--d:.06s"><i data-lucide="zap"></i><h3>Improve efficiency</h3><p>Speed up routine tasks by removing friction points in the UI.</p></div>
+        <div class="value rv" style="--d:.12s"><i data-lucide="git-merge"></i><h3>Simplify flows</h3><p>Turn multi-step procedures into a short conversation.</p></div>
+        <div class="value rv" style="--d:.18s"><i data-lucide="sparkles"></i><h3>Discoverability</h3><p>Surface deep features through suggested prompts.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="flow-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="kicker">User flow</span><h2 id="flow-h">From question to answer <span class="grad-text">in one panel</span></h2><p>The core journey shown in the prototype.</p></div>
+      <ol class="ndi-flow"><li class="rv" style="--d:0.00s"><span class="fl-ico"><i data-lucide="mouse-pointer-click"></i></span><span class="fl-n">01</span><strong>Click “Need Help?”</strong><p>Persistent button in the global header, or ⌘ + K</p></li><li class="rv" style="--d:0.06s"><span class="fl-ico"><i data-lucide="message-square-dashed"></i></span><span class="fl-n">02</span><strong>Panel opens</strong><p>Welcome state with suggested prompts and a query field</p></li><li class="rv" style="--d:0.12s"><span class="fl-ico"><i data-lucide="text-cursor-input"></i></span><span class="fl-n">03</span><strong>Pick or type</strong><p>Choose a suggested prompt or type a question</p></li><li class="rv" style="--d:0.18s"><span class="fl-ico"><i data-lucide="loader"></i></span><span class="fl-n">04</span><strong>Assistant responds</strong><p>Typing indicator, then an answer with selectable options</p></li><li class="rv" style="--d:0.24s"><span class="fl-ico"><i data-lucide="check-circle-2"></i></span><span class="fl-n">05</span><strong>Act in place</strong><p>Follow-up answer and next action, without leaving the page</p></li></ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="place-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="kicker">Key decision</span><h2 id="place-h">Help, always <span class="grad-text">one click away</span></h2><p>A support system that feels like part of the workflow, not a place users have to go.</p></div>
+      <figure class="ndi-shot rv"><img src="assets/work/ndi/ndi-dashboard-assistant.jpg" alt="Admin dashboard with the AI assistant panel open on the right" width="1018" height="615" loading="lazy"><figcaption>The assistant opens as a floating side panel over the admin dashboard, so the data stays in view.</figcaption></figure>
+      <div class="ndi-place rv">
+        <div>
+          <h3>Strategic placement in the global header</h3>
+          <p>Anchoring help in the header treats support as a core part of the product, not an afterthought. It sits where people already expect utility and account actions: next to notifications, wishlist, cart and profile.</p>
+          <ul class="chips"><li>Reduced friction</li><li>Faster assistance</li></ul>
+        </div>
+        <img src="assets/work/ndi/ndi-header-entry.jpg" alt="Header with the Need Help? button beside notifications, wishlist, cart and profile" width="620" height="350" loading="lazy">
+      </div>
+      <div class="value-grid" style="margin-top:16px">
+        <div class="value rv"><i data-lucide="eye"></i><h3>Always visible</h3><p>Reachable from every screen through the top navigation.</p></div>
+        <div class="value rv" style="--d:.06s"><i data-lucide="scan-search"></i><h3>Context aware</h3><p>Designed to respond to the module the user is viewing.</p></div>
+        <div class="value rv" style="--d:.12s"><i data-lucide="panel-right"></i><h3>Non-intrusive</h3><p>Opens beside the data rather than replacing it.</p></div>
+        <div class="value rv" style="--d:.18s"><i data-lucide="zap"></i><h3>Instant access</h3><p>One click or ⌘ + K opens the panel.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="ui-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="kicker">Final UI</span><h2 id="ui-h">The conversation, <span class="grad-text">state by state</span></h2><p>Each state was designed so users always know what is happening and what they can do next.</p></div>
+      <div class="ndi-states"><figure class="ndi-state rv" style="--d:0.00s"><img src="assets/work/ndi/ndi-state-1.jpg" alt="AI assistant welcome state" width="240" height="400" loading="lazy"><figcaption><span>01 · Welcome</span><p>Brand mark, a clear promise and scrollable prompt chips so users never face an empty box.</p></figcaption></figure><figure class="ndi-state rv" style="--d:0.06s"><img src="assets/work/ndi/ndi-state-2.jpg" alt="AI assistant waiting state" width="240" height="400" loading="lazy"><figcaption><span>02 · Waiting</span><p>The question echoes instantly and a typing indicator shows the assistant is working.</p></figcaption></figure><figure class="ndi-state rv" style="--d:0.12s"><img src="assets/work/ndi/ndi-state-3.jpg" alt="AI assistant options state" width="240" height="400" loading="lazy"><figcaption><span>03 · Options</span><p>Answers end in tappable options, so the next step is a click rather than more typing.</p></figcaption></figure><figure class="ndi-state rv" style="--d:0.18s"><img src="assets/work/ndi/ndi-state-4.jpg" alt="AI assistant resolution state" width="240" height="400" loading="lazy"><figcaption><span>04 · Resolution</span><p>A specific answer with a follow-up offer keeps the conversation moving toward a result.</p></figcaption></figure></div>
+      <ul class="roles rv" style="margin-top:28px;justify-content:center"><li><i data-lucide="search"></i>Smart search</li><li><i data-lucide="scan-search"></i>Context awareness</li><li><i data-lucide="zap"></i>Quick actions</li><li><i data-lucide="headset"></i>Instant assistance</li></ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="wf-h" style="padding-top:0">
+    <div class="wrap cs-section">
+      <div class="side rv"><span class="kicker">Workflow</span><h2 id="wf-h" style="margin-top:14px">How I worked</h2></div>
+      <div class="ndi-tools rv">
+        <div class="ndi-tool"><span><i data-lucide="figma"></i></span><div><strong>Figma</strong><p>Dashboard UI, chat panel components and the clickable prototype.</p></div></div>
+        <div class="ndi-tool"><span><i data-lucide="wand-sparkles"></i></span><div><strong>Figma Make</strong><p>Fast exploration of layouts and interaction ideas.</p></div></div>
+        <div class="ndi-tool"><span><i data-lucide="message-square"></i></span><div><strong>Claude</strong><p>Drafting and refining conversation copy and suggested prompts.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="next-h" style="padding-top:0">
+    <div class="wrap cs-section">
+      <div class="side rv"><span class="kicker">Next</span><h2 id="next-h" style="margin-top:14px">What I'd explore next</h2></div>
+      <ul class="cs-steps rv">
+        <li><span class="n"><i data-lucide="package-search"></i></span><div><h3>Product discovery in chat</h3><p>Product cards inside replies, so users can find and compare items without leaving the conversation.</p></div></li>
+        <li><span class="n"><i data-lucide="wrench"></i></span><div><h3>Service requests</h3><p>Booking installation and maintenance directly from the assistant.</p></div></li>
+        <li><span class="n"><i data-lucide="triangle-alert"></i></span><div><h3>Edge states</h3><p>No-answer, error and hand-off-to-a-person states.</p></div></li>
+        <li><span class="n"><i data-lucide="users"></i></span><div><h3>Usability testing</h3><p>Testing with procurement users to validate the flow and measure time saved.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Design principle" style="padding-top:0">
+    <div class="wrap">
+      <blockquote class="ndi-quote rv"><p>“AI isn't about chat. It's about making complexity feel simple.”</p><footer><img src="assets/ankit-rana-sm.jpg" alt="" width="48" height="48"><span><strong>Ankit Rana</strong>UI design · UX strategy · Prototyping</span></footer></blockquote>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0" aria-label="Next project">
+    <div class="wrap"><a class="next-proj p1 rv" href="case-corporate.html"><span class="kicker">Next project</span><strong>Corporate Website Redesign <i data-lucide="arrow-right"></i></strong></a></div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap f-grid">
+    <div class="f-id"><img class="brand-photo" src="assets/ankit-rana-sm.jpg" alt="" width="44" height="44" loading="lazy"><div><strong>Ankit Rana</strong><span>UI/UX Designer</span></div></div>
+    <ul class="f-links">
+      <li><a href="work.html">Work</a></li><li><a href="skills.html">Skills</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+      <li><a data-linkedin href="https://www.linkedin.com/in/ankitrana190997/"><i data-lucide="linkedin"></i>LinkedIn</a></li>
+      <li><a href="https://www.behance.net/ankitrana31" target="_blank" rel="noopener"><i data-lucide="palette"></i>Behance</a></li>
+      <li><a data-email-link href="mailto:ankitrana3654@gmail.com"><i data-lucide="mail"></i>Email</a></li>
+      <li><a data-whatsapp href="https://wa.me/918287259865"><i data-lucide="message-circle"></i>WhatsApp</a></li>
+      <li><a data-phone-link href="tel:+918287259865"><i data-lucide="phone"></i><span data-phone-text>+91 82872 59865</span></a></li>
+    </ul>
+    <p class="f-copy">© <span data-year>2026</span> Ankit Rana</p>
+    <a class="to-top" href="#top" aria-label="Back to top"><i data-lucide="arrow-up"></i></a>
+  </div>
+</footer>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="work-data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

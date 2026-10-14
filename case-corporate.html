@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Corporate Website Redesign Case Study</title>
+<meta name="description" content="Restructuring a corporate site so services are easier to find and the brand feels current across devices.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Corporate Website Redesign Case Study">
+<meta property="og:description" content="Restructuring a corporate site so services are easier to find and the brand feels current across devices.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#070714">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235B3DF5'/%3E%3Cstop offset='1' stop-color='%23E0257A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='24' font-weight='800' fill='white' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600;700&family=Jura:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <div class="nav-pill">
+      <a class="brand" href="index.html" aria-label="Ankit Rana, UI/UX Designer, home"><img class="brand-photo" src="assets/ankit-rana-sm.jpg" alt="" width="40" height="40"><span class="brand-txt"><span>Ankit Rana</span><small>UI/UX Designer</small></span></a>
+      <ul class="nav-links">
+        <li class="dd" id="workDD">
+          <button class="dd-btn active" id="workBtn" type="button" aria-expanded="false" aria-controls="workMenu">Work <i data-lucide="chevron-down" class="chev"></i></button>
+          <div class="dd-menu" id="workMenu" hidden>
+            <div class="dd-grid"><div class="dd-group"><p class="dd-label">Case studies</p><a class="dd-item" href="case-ndi.html"><span class="dd-ico"><i data-lucide="bot"></i></span><span><strong>NDI · AI Assistant for Dental Procurement</strong><small>Enterprise dashboard + AI assistant</small></span></a><a class="dd-item" href="case-corporate.html"><span class="dd-ico"><i data-lucide="building-2"></i></span><span><strong>Corporate Website Redesign</strong><small>Enterprise site, responsive UI</small></span></a><a class="dd-item" href="case-government.html"><span class="dd-ico"><i data-lucide="landmark"></i></span><span><strong>Government Website Redesign</strong><small>Public service, accessible UI</small></span></a><a class="dd-item" href="case-mobile.html"><span class="dd-ico"><i data-lucide="smartphone"></i></span><span><strong>Mobile App UI Concept</strong><small>User flows, mobile screens</small></span></a></div><div class="dd-group compact"><p class="dd-label">Showcase</p><a class="dd-item" href="work.html#websites"><span class="dd-ico"><i data-lucide="monitor"></i></span><span><strong>Website designs</strong></span></a><a class="dd-item" href="work.html#mobile"><span class="dd-ico"><i data-lucide="smartphone"></i></span><span><strong>Mobile UI</strong></span></a><a class="dd-item" href="work.html#wireframes"><span class="dd-ico"><i data-lucide="pencil-ruler"></i></span><span><strong>Wireframes & UX</strong></span></a><a class="dd-item" href="work.html#developed"><span class="dd-ico"><i data-lucide="code"></i></span><span><strong>Developed websites</strong></span></a><a class="dd-item" href="work.html#branding"><span class="dd-ico"><i data-lucide="shapes"></i></span><span><strong>Branding & logos</strong></span></a><a class="dd-item" href="work.html#social"><span class="dd-ico"><i data-lucide="megaphone"></i></span><span><strong>Social media creatives</strong></span></a><a class="dd-item" href="work.html#videos"><span class="dd-ico"><i data-lucide="clapperboard"></i></span><span><strong>Videos</strong></span></a></div></div>
+            <a class="dd-all" href="work.html">View all work <i data-lucide="arrow-right" class="i-r"></i></a>
+          </div>
+        </li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta magnetic" href="resume.html">Resume <i data-lucide="file-text"></i></a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobilePanel" aria-label="Open menu">
+        <i data-lucide="menu" class="i-m"></i><i data-lucide="x" class="i-x"></i>
+      </button>
+    </div>
+    <nav class="mobile-panel" id="mobilePanel" aria-label="Mobile" hidden>
+      <ul>
+        <li>
+          <button class="m-link m-toggle" id="mWorkBtn" type="button" aria-expanded="false" aria-controls="mWork">Work <i data-lucide="chevron-down" class="chev"></i></button>
+          <ul class="m-subs" id="mWork" hidden><li class="m-group">Case studies</li><li><a class="m-sub" href="case-ndi.html"><i data-lucide="bot"></i>NDI · AI Assistant for Dental Procurement</a></li><li><a class="m-sub" href="case-corporate.html"><i data-lucide="building-2"></i>Corporate Website Redesign</a></li><li><a class="m-sub" href="case-government.html"><i data-lucide="landmark"></i>Government Website Redesign</a></li><li><a class="m-sub" href="case-mobile.html"><i data-lucide="smartphone"></i>Mobile App UI Concept</a></li><li class="m-group">Showcase</li><li><a class="m-sub" href="work.html#websites"><i data-lucide="monitor"></i>Website designs</a></li><li><a class="m-sub" href="work.html#mobile"><i data-lucide="smartphone"></i>Mobile UI</a></li><li><a class="m-sub" href="work.html#wireframes"><i data-lucide="pencil-ruler"></i>Wireframes & UX</a></li><li><a class="m-sub" href="work.html#developed"><i data-lucide="code"></i>Developed websites</a></li><li><a class="m-sub" href="work.html#branding"><i data-lucide="shapes"></i>Branding & logos</a></li><li><a class="m-sub" href="work.html#social"><i data-lucide="megaphone"></i>Social media creatives</a></li><li><a class="m-sub" href="work.html#videos"><i data-lucide="clapperboard"></i>Videos</a></li><li><a class="m-sub all" href="work.html"><i data-lucide="layout-grid"></i>View all work</a></li></ul>
+        </li>
+        <li><a class="m-link" href="skills.html">Skills <i data-lucide="arrow-right"></i></a></li>
+        <li><a class="m-link" href="about.html">About <i data-lucide="arrow-right"></i></a></li>
+        <li><a class="m-link" href="contact.html">Contact <i data-lucide="arrow-right"></i></a></li>
+      </ul>
+      <a class="btn btn-primary" href="resume.html">View Resume <i data-lucide="file-text"></i></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="page-hero" id="top" aria-labelledby="cs-h">
+    <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <a class="crumb" href="work.html"><i data-lucide="arrow-left"></i>All projects</a>
+      <div class="p-top" style="margin-bottom:18px"><span class="p-num">Case study 02</span><span class="tag"><i data-lucide="building-2"></i>Corporate website</span></div>
+      <h1 class="page-title" id="cs-h">Corporate Website Redesign</h1>
+      <p class="page-lede">Restructuring a corporate site so services are easier to find and the brand feels current across devices.</p>
+      <dl class="cs-meta">
+        <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
+        <div><dt>Platform</dt><dd>Website · Responsive</dd></div>
+        <div><dt>Tools</dt><dd>Figma</dd></div>
+        <div><dt>Timeline</dt><dd style="color:var(--muted)">[Add timeline]</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="wrap rv"><div class="cs-cover p1"><div class="mock" style="position:relative;z-index:1"><div class="browser" aria-hidden="true">
+  <div class="b-bar"><i></i><i></i><i></i><span></span></div>
+  <div class="b-body">
+    <div class="r" style="justify-content:space-between"><span class="k v" style="width:60px;height:12px"></span><span class="k" style="width:160px;height:12px"></span></div>
+    <div class="r" style="margin-top:10px"><div style="flex:1.1;display:grid;gap:10px"><span class="k w" style="height:20px;width:92%"></span><span class="k w" style="height:20px;width:64%"></span><span class="k" style="height:9px;width:86%"></span><span class="k" style="height:9px;width:60%"></span><span class="k v" style="height:26px;width:42%;border-radius:99px;margin-top:6px"></span></div><span class="k m" style="flex:1;height:150px;border-radius:14px"></span></div>
+    <div class="r"><span class="k" style="flex:1;height:70px"></span><span class="k" style="flex:1;height:70px"></span><span class="k" style="flex:1;height:70px"></span></div>
+  </div>
+</div></div></div></div>
+
+  <section class="section" aria-labelledby="ov-h">
+    <div class="wrap cs-section">
+      <div class="side rv"><span class="kicker">Overview</span><h2 id="ov-h" style="margin-top:14px">The challenge</h2></div>
+      <div class="prose rv">
+        <p>Restructuring a corporate site so services are easier to find and the brand feels current across devices.</p>
+        <div class="todo-box"><i data-lucide="pencil"></i><div><strong>Add the context</strong>Who the users are, what wasn't working, and the goal the team agreed on. Two or three sentences is enough.</div></div>
+        <ul class="chips" aria-label="Deliverables"><li>Information architecture</li><li>Wireframes</li><li>Responsive UI</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="pr-h" style="padding-top:0">
+    <div class="wrap cs-section">
+      <div class="side rv"><span class="kicker">Process</span><h2 id="pr-h" style="margin-top:14px">How I approached it</h2></div>
+      <ol class="cs-steps rv">
+        <li><span class="n"><i data-lucide="search"></i></span><div><h3>Understand</h3><p>[What you learned about goals, users and constraints]</p></div></li>
+        <li><span class="n"><i data-lucide="target"></i></span><div><h3>Define</h3><p>[The core problem and the requirements you prioritised]</p></div></li>
+        <li><span class="n"><i data-lucide="git-branch"></i></span><div><h3>Explore</h3><p>[Sitemap, user flows and wireframes you created]</p></div></li>
+        <li><span class="n"><i data-lucide="pen-tool"></i></span><div><h3>Design</h3><p>[Visual direction, components and responsive screens]</p></div></li>
+        <li><span class="n"><i data-lucide="refresh-cw"></i></span><div><h3>Refine</h3><p>[Feedback you received and what changed]</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="sc-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="kicker">Key screens</span><h2 id="sc-h">Final <span class="grad-text">designs</span></h2></div>
+      <div class="gallery">
+        <div class="shot wide p1 rv"><span><i data-lucide="image"></i>Add hero screen</span></div>
+        <div class="shot p1 rv"><span><i data-lucide="image"></i>Add screen</span></div>
+        <div class="shot p1 rv"><span><i data-lucide="smartphone"></i>Add mobile screen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="ds-h" style="padding-top:0">
+    <div class="wrap cs-section">
+      <div class="side rv"><span class="kicker">Visual system</span><h2 id="ds-h" style="margin-top:14px">Colors &amp; type</h2></div>
+      <div class="sys-row rv">
+        <div class="card"><h3>Color palette</h3><div class="sys-swatches"><div><i style="background:#7C5CFF"></i>Primary</div><div><i style="background:#FF3D9A"></i>Accent</div><div><i style="background:#3D7BFF"></i>Info</div><div><i style="background:#12122C"></i>Surface</div><div><i style="background:#F5F4FF"></i>Text</div></div><p style="font-size:.9375rem">Replace with the project's real palette.</p></div>
+        <div class="card"><h3>Typography</h3><div class="sys-type"><div><strong style="font:800 1.75rem/1 var(--font-display)">Heading</strong><span>32 / Bold</span></div><div><strong style="font:700 1.2rem/1 var(--font-display)">Subheading</strong><span>20 / Bold</span></div><div><span style="font:500 1rem/1.4 var(--font-body);color:var(--ink)">Body text</span><span>16 / Regular</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="ln-h" style="padding-top:0">
+    <div class="wrap cs-section">
+      <div class="side rv"><span class="kicker">Reflection</span><h2 id="ln-h" style="margin-top:14px">What I learned</h2></div>
+      <div class="prose rv">
+        <div class="todo-box"><i data-lucide="pencil"></i><div><strong>Add your reflection</strong>What you'd do differently, feedback from the team, and what this project taught you. Only include outcomes you can support.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0" aria-label="Next project">
+    <div class="wrap"><a class="next-proj p2 rv" href="case-government.html"><span class="kicker">Next project</span><strong>Government Website Redesign <i data-lucide="arrow-right"></i></strong></a></div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap f-grid">
+    <div class="f-id"><img class="brand-photo" src="assets/ankit-rana-sm.jpg" alt="" width="44" height="44" loading="lazy"><div><strong>Ankit Rana</strong><span>UI/UX Designer</span></div></div>
+    <ul class="f-links">
+      <li><a href="work.html">Work</a></li><li><a href="skills.html">Skills</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+      <li><a data-linkedin href="https://www.linkedin.com/in/ankitrana190997/"><i data-lucide="linkedin"></i>LinkedIn</a></li>
+      <li><a href="https://www.behance.net/ankitrana31" target="_blank" rel="noopener"><i data-lucide="palette"></i>Behance</a></li>
+      <li><a data-email-link href="mailto:ankitrana3654@gmail.com"><i data-lucide="mail"></i>Email</a></li>
+      <li><a data-whatsapp href="https://wa.me/918287259865"><i data-lucide="message-circle"></i>WhatsApp</a></li>
+      <li><a data-phone-link href="tel:+918287259865"><i data-lucide="phone"></i><span data-phone-text>+91 82872 59865</span></a></li>
+    </ul>
+    <p class="f-copy">© <span data-year>2026</span> Ankit Rana</p>
+    <a class="to-top" href="#top" aria-label="Back to top"><i data-lucide="arrow-up"></i></a>
+  </div>
+</footer>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="work-data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
